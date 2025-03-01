@@ -3,6 +3,7 @@
 
 #include "types.hpp"
 
+
 long fibonacci(const int n)
 {
     //Setting variables
