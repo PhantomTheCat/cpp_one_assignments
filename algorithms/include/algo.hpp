@@ -8,11 +8,15 @@ long fibonacci(const int n)
 {
     //Setting variables
     int output = 0;
-    int prevNumber1 = 0;
+    int prevNumber1 = 1;
     int prevNumber2 = 0;
 
+    //Accounting for the scenario where we get 1 or below, in that case, it's just the number
+    if (n <= 1) {return n;}
+
     //Creating a for loop that will stop when we get to n
-    for (int i = 0; i <= n; i++) 
+    //Starting at 1 as we have below 1 covered
+    for (int i = 2; i <= n; i++) 
     {
         //Incrementing output
         output = prevNumber1 + prevNumber2;
@@ -28,15 +32,18 @@ long fibonacci(const int n)
 
 int linear_search(Array * a, const int target)
 {
+    //Getting a value to check, so we don't have to use size_t
+    int index = 0;
+
     //Using for loop to search array
     for (size_t i = 0; i < a->len; i++) 
     {
-        //Getting result for specific point and checking
         int result = a->data[i];
         if (result == target) 
         {
-            return i;
+            return index;
         }
+        index++;
     }
 
     //Returning -1 if nothing is returned from array
@@ -45,14 +52,16 @@ int linear_search(Array * a, const int target)
 
 long factorial(const int n)
 {
-    //Making an output that starts with our regular value (counts as the full one)
+    //Making an output and index for tracking
     int output = n;
+    int index = n;
 
     //Making an for loop going down the list, multiplying each one on
     for (size_t i = n; i > 0; i--) 
     {
-        int nextNumber = i - 1;
+        int nextNumber = index - 1;
         output = output * nextNumber;
+        index--;
     }
 
     return output;
