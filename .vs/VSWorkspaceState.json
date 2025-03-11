@@ -10,9 +10,7 @@
     "\\algorithms",
     "\\algorithms\\include",
     "\\algorithms\\src",
-    "\\algorithms\\test",
-    "\\out"
+    "\\algorithms\\test"
   ],
-  "SelectedNode": "\\algorithms\\test\\algorithms_test.cpp",
   "PreviewInSolutionExplorer": false
 }
