@@ -6,42 +6,6 @@
 #include <string>
 
 
-/*
-    //This is just a note that I added in because I wasn't sure if you got my message:
-    // THE FIBONACCI SEQUENCE YOU HAVE IS NOT THE REAL FIBONACCI SEQUENCE
-
-    // Your copy is testing for 0, 1, 2, 3, 5, 8, 13, 21 in a sequence, when
-    // the sequence is actually 0, 1, 1, 2, 3, 5, 8, 13, 21 and your test is wrong because of it
-    // In other words, you're missing one of the 1s at the start, which I got around by
-    // having an exception in the if (n <= 1) { return n; }
-
-    //Here's how the actual code would work, if you want it:
-
-long fibonacci(const int n)
-{
-    //Setting variables
-    int output = 0;
-    int prevNumber1 = 0;
-    int prevNumber2 = 0;
-
-    //Creating a for loop that will stop when we get to n
-    //Starting at 1 as we have below 1 covered
-    for (int i = 1; i <= n; i++)
-    {
-        //Incrementing output
-        output = prevNumber1 + prevNumber2;
-
-        //Iterating for next loop starting from the back,
-        // but not changing output till next loop
-        prevNumber2 = prevNumber1;
-        prevNumber1 = output;
-    }
-
-    return output;
-}
-*/
-
-//Fibonacci sequence that works with your code (see example above)
 long fibonacci(const int n)
 {
     //Setting variables
